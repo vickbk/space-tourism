@@ -1,4 +1,4 @@
-import PageTitle from "@components/shared/PageTitle";
+import PageTitle from "@components/shared/DisplayTitles";
 import Link from "next/link";
 
 export default function HomeMain() {
