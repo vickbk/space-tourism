@@ -23,13 +23,13 @@ export default function MainHeader() {
       <button type="button" onClick={showHideNav}>
         <Image src={humberger} alt="Open navigation bar" />
       </button>
-      <nav className={`${showNav ? "absolute" : "hidden"}`}>
-        <button type="button" onClick={showHideNav}>
+      <nav className={`${showNav ? "navbar" : "hidden"}`}>
+        <button className="self-end" type="button" onClick={showHideNav}>
           <Image src={close} alt="Close navigation bar" />
         </button>
         <ul>
           {paths.map(([path, text], key) => (
-            <li key={key}>
+            <li className="p-4" key={key}>
               <Link href={"/" + path}>
                 <span></span>
                 {text}
