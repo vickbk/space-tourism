@@ -1,10 +1,10 @@
 "use client";
 import PagesTitle from "@components/shared/PagesTitle";
-import * as data from "@utils/starter-code/data.json";
 import { useState } from "react";
+import { loadData } from "../../lib/load-data";
 
 export default function DestinationMain() {
-  const { destinations } = data;
+  const destinations = loadData("destinations");
   const [activeIndex, setActiveIndex] = useState(0);
   const {
     name,
@@ -15,7 +15,7 @@ export default function DestinationMain() {
   } = destinations[activeIndex];
   return (
     <>
-      <PagesTitle title={["01", "Pick your destination"]} />
+      <PagesTitle title={"01 Pick your destination"} />
       <section>
         <article>
           <h2>Planet illustration</h2>
