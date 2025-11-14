@@ -29,9 +29,9 @@ export default function MainHeader() {
         </button>
         <ul>
           {paths.map(([path, text], key) => (
-            <li className="p-4" key={key}>
+            <li className="navbar__link p-4" key={key}>
               <Link href={"/" + path}>
-                <span></span>
+                <span className="navbar__count"></span>
                 {text}
               </Link>
             </li>

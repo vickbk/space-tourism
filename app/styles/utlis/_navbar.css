@@ -7,4 +7,14 @@
   uppercase;
   background-color: hsl(var(--background) / 0.8);
   font-family: var(--ff-barlow-cond);
+  counter-reset: nav-link;
+}
+
+.navbar__link {
+  counter-increment: nav-link;
+}
+
+.navbar__count::before {
+  content: "0" counter(nav-link);
+  @apply inline-block mr-4;
 }
