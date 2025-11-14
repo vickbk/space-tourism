@@ -27,6 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* using a custom body element to manage the background change on page changes */}
       <CustomBody>
         <MainHeader />
         {children}
