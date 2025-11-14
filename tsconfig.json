@@ -16,7 +16,8 @@
     "paths": {
       "@/*": ["./app/*"],
       "@components/*": ["./components/*"],
-      "@assets/*": ["./utils/starter-code/assets/*"]
+      "@assets/*": ["./utils/starter-code/assets/*"],
+      "@utils/*": ["./utils/*"]
     },
     "plugins": [
       {
