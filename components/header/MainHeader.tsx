@@ -2,6 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as logo from "@assets/shared/logo.svg";
+import * as humberger from "@assets/shared/icon-hamburger.svg";
+import * as close from "@assets/shared/icon-close.svg";
+import { useState } from "react";
 
 export default function MainHeader() {
   const paths = [
@@ -10,12 +13,20 @@ export default function MainHeader() {
     ["crew", "Crew"],
     ["technology", "Technology"],
   ];
+  const [showNav, setShowNav] = useState(false);
+  const showHideNav = () => setShowNav(!showNav);
   return (
-    <header>
+    <header className="p-8 flex justify-between relative">
       <Link href={"./"}>
         <Image src={logo} alt="Home page logo" />
       </Link>
-      <nav>
+      <button type="button" onClick={showHideNav}>
+        <Image src={humberger} alt="Open navigation bar" />
+      </button>
+      <nav className={`${showNav ? "absolute" : "hidden"}`}>
+        <button type="button" onClick={showHideNav}>
+          <Image src={close} alt="Close navigation bar" />
+        </button>
         <ul>
           {paths.map(([path, text], key) => (
             <li key={key}>
