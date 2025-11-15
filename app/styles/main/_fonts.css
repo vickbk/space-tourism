@@ -1,3 +1,7 @@
+body {
+  letter-spacing: 0.1em;
+}
+
 .ff-barlow-cond {
   font-family: var(--ff-barlow-cond);
 }

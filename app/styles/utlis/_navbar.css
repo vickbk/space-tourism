@@ -11,10 +11,11 @@
 }
 
 .navbar__link {
+  @apply p-4;
   counter-increment: nav-link;
 }
 
 .navbar__count::before {
   content: "0" counter(nav-link);
-  @apply inline-block mr-4;
+  @apply inline-block mr-4 font-bold;
 }
