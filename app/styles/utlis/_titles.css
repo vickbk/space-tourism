@@ -1,12 +1,23 @@
 .title-big {
-  @apply text-lg;
+  @apply text-lg uppercase;
   font-family: var(--ff-barlow-cond);
+}
+.normal-title {
+  @apply text-2xl uppercase;
+  color: hsl(var(--white) / 0.6);
+}
+.focus,
+.normal-title {
+  font-family: var(--ff-bellefair);
 }
 .title-big .focus {
   font-size: clamp(5rem, 3.2394rem + 7.5117vw, 10rem);
-  font-family: var(--ff-bellefair);
 }
 
+.normal-title .focus {
+  color: hsl(var(--white) / 1);
+  font-size: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
+}
 .page-title {
   @apply uppercase flex justify-center gap-4;
   font-family: var(--ff-barlow-cond);

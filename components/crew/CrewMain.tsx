@@ -18,23 +18,26 @@ export default function CrewMain() {
   return (
     <DefaultContainer>
       <PagesTitle title="02 Meet your crew" />
-      <section>
+      <section className="crew">
         <article>
-          <h2>
+          <h2 className="normal-title py-8">
             <PageTitle title={[role, name]} />
           </h2>
           <p>{bio}</p>
-          <nav>
-            <ul>
-              {crewData.map(({ name }, index) => (
-                <li key={index}>
-                  <button type="button" onClick={() => setActiveIndex(index)}>
-                    <span>{name}</span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <ul className="flex justify-center gap-4 py-8">
+            {crewData.map(({ name }, index) => (
+              <li key={index}>
+                <button
+                  className="crew__choice "
+                  type="button"
+                  onClick={() => setActiveIndex(index)}
+                  data-current={index === activeIndex}
+                >
+                  <span className="sr-only">{name}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
         </article>
         <div>
           <img src={image} alt={`A picture of our ${role} ${name}`} />
