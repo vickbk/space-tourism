@@ -2,12 +2,17 @@
   @apply fixed top-0 right-0
   p-8 
   backdrop-blur-xs 
-  h-screen w-3/4
+  h-screen w-3/4 
+  translate-x-full transition-transform duration-300
   flex flex-col gap-16
   uppercase;
   background-color: hsl(var(--background) / 0.8);
   font-family: var(--ff-barlow-cond);
   counter-reset: nav-link;
+}
+
+.navbar[data-open="true"] {
+  @apply translate-x-0;
 }
 
 .navbar__list {
