@@ -2,17 +2,17 @@
   @apply uppercase 
   pb-4 
   transition-colors duration-300;
-  color: hsl(var(--foreground) / var(--choice-accent, 0.6));
+  color: hsl(var(--blue-300) / var(--choice-accent, 0.6));
   &:hover,
   &:active,
   &:focus {
-    border-bottom: 0.3rem solid hsl(var(--foreground) / 0.8);
+    border-bottom: 0.3rem solid hsl(var(--blue-300) / 0.8);
     --choice-accent: 0.8;
   }
 }
 
 .planet__choice[data-current="true"] {
-  border-bottom: 0.3rem solid hsl(var(--foreground));
+  border-bottom: 0.3rem solid hsl(var(--blue-300));
   --choice-accent: 1;
 }
 

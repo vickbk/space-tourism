@@ -1,6 +1,6 @@
 "use client";
 import PagesTitle from "@components/shared/PagesTitle";
-import { useState } from "react";
+import { CSSProperties, useState } from "react";
 import { loadData } from "../../lib/load-data";
 import { DefaultContainer } from "@components/shared/DefaultContainer";
 
@@ -17,7 +17,7 @@ export default function DestinationMain() {
   return (
     <DefaultContainer>
       <PagesTitle title={"01 Pick your destination"} />
-      <section className="planet">
+      <section className="planet c-blue-300">
         <article>
           <h2 className="sr-only">Planet illustration</h2>
           <div className="px-12 py-16">
@@ -47,15 +47,20 @@ export default function DestinationMain() {
           <h2 className="planet__title">
             <span className="sr-only">The planet </span> {name}
           </h2>
-          <p>{description}</p>
-          <div>
+          <p className="pb-8 border-b">{description}</p>
+          <div className="pt-8 uppercase">
             {[
               ["avg. distance", distance],
               ["est. travel time", travel],
             ].map(([title, value], index) => (
-              <div key={index}>
-                <div>{title}</div>
-                <div>{value}</div>
+              <div key={index} className="">
+                <div
+                  className="ff-barlow-cond c-blue-300"
+                  style={{ "--txt-accent": 0.6 } as CSSProperties}
+                >
+                  {title}
+                </div>
+                <div className="text-3xl ff-bellefair">{value}</div>
               </div>
             ))}
           </div>
