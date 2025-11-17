@@ -3,7 +3,7 @@
   p-8 
   backdrop-blur-xs 
   h-screen w-3/4 
-  translate-x-full transition-transform duration-300
+  translate-x-full transition-transform duration-500 ease-in-out
   flex flex-col gap-16
   uppercase;
   background-color: hsl(var(--background) / 0.8);
