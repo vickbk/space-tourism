@@ -10,12 +10,34 @@
   counter-reset: nav-link;
 }
 
-.navbar__link {
-  @apply p-4;
+.navbar__list {
+  @apply p-4 relative;
   counter-increment: nav-link;
 }
 
 .navbar__count::before {
   content: "0" counter(nav-link);
   @apply inline-block mr-4 font-bold;
+}
+
+.navbar__link {
+  @apply block relative;
+  &::after {
+    @apply absolute h-full -right-12;
+    border-inline-start: 0.5em solid hsl(var(--foreground) / 0.6);
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    &::after {
+      content: "";
+    }
+  }
+}
+
+.navbar__link[data-active="true"] {
+  &::after {
+    content: "";
+    border-inline-start-color: hsl(var(--foreground));
+  }
 }

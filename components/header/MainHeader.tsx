@@ -5,6 +5,7 @@ import * as logo from "@assets/shared/logo.svg";
 import * as humberger from "@assets/shared/icon-hamburger.svg";
 import * as close from "@assets/shared/icon-close.svg";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function MainHeader() {
   const paths = [
@@ -13,6 +14,7 @@ export default function MainHeader() {
     ["crew", "Crew"],
     ["technology", "Technology"],
   ];
+  const pathname = usePathname();
   const [showNav, setShowNav] = useState(false);
   const showHideNav = () => setShowNav(!showNav);
   return (
@@ -29,8 +31,13 @@ export default function MainHeader() {
         </button>
         <ul>
           {paths.map(([path, text], key) => (
-            <li className="navbar__link" key={key}>
-              <Link href={"/" + path}>
+            <li className="navbar__list" key={key}>
+              <Link
+                className="navbar__link"
+                href={"/" + path}
+                onClick={showHideNav}
+                data-active={pathname.substring(1) === path}
+              >
                 <span className="navbar__count"></span>
                 {text}
               </Link>
