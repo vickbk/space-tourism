@@ -17,17 +17,27 @@ export default function DestinationMain() {
   return (
     <DefaultContainer>
       <PagesTitle title={"01 Pick your destination"} />
-      <section>
+      <section className="planet">
         <article>
           <h2 className="sr-only">Planet illustration</h2>
-          <img src={image} alt={`Planet ${name} preview image`} />
+          <div className="px-12 py-16">
+            <img src={image} alt={`Planet ${name} preview image`} />
+          </div>
         </article>
         <article>
           <nav>
-            <ul>
+            <ul
+              className="flex justify-center gap-4 ff-barlow-cond"
+              aria-label="Planet destination list"
+            >
               {destinations.map(({ name }, index) => (
                 <li key={index}>
-                  <button type="button" onClick={() => setActiveIndex(index)}>
+                  <button
+                    className="planet__choice"
+                    type="button"
+                    onClick={() => setActiveIndex(index)}
+                    data-current={activeIndex === index}
+                  >
                     {name}
                   </button>
                 </li>
