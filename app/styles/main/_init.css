@@ -34,7 +34,9 @@ body {
   color: hsl(var(--foreground));
   font-family: var(--ff-barlow);
   line-height: 1.6;
-  @apply font-normal;
+  @apply font-normal 
+  flex flex-col
+  min-h-screen;
 }
 
 button {

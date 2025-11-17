@@ -1,0 +1,31 @@
+.big-button {
+  @apply grid relative place-items-center 
+  px-8 
+  uppercase
+  aspect-square rounded-full;
+  background-color: hsl(var(--foreground));
+  color: hsl(var(--background));
+  font-family: var(--ff-bellefair);
+
+  &:focus,
+  &:hover,
+  &:active {
+    @apply transition-colors duration-300;
+    color: hsl(var(--background) / 0.7);
+    &::before {
+      @apply scale-100 opacity-100;
+    }
+  }
+  &::before {
+    @apply absolute 
+    w-full aspect-square 
+    rounded-full
+    outline-64
+    scale-0
+    duration-300 
+    opacity-0 ease-in-out;
+    content: "";
+    outline-color: hsl(var(--foreground) / 0.3);
+    transition-property: scale, opacity, color;
+  }
+}

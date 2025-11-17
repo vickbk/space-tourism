@@ -18,7 +18,7 @@ export default function MainHeader() {
   const [showNav, setShowNav] = useState(false);
   const showHideNav = () => setShowNav(!showNav);
   return (
-    <header className="p-8 flex justify-between relative">
+    <header className="p-8 mb-auto flex justify-between relative">
       <Link href={"./"}>
         <Image src={logo} alt="Home page logo" />
       </Link>

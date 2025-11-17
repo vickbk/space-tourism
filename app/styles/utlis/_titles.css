@@ -1,0 +1,8 @@
+.title-big {
+  @apply text-lg;
+  font-family: var(--ff-barlow-cond);
+}
+.title-big .focus {
+  font-size: clamp(5rem, 3.2394rem + 7.5117vw, 10rem);
+  font-family: var(--ff-bellefair);
+}

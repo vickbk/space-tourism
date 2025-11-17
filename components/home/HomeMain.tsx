@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function HomeMain() {
   return (
-    <section>
+    <section className="px-8 text-center">
       <article>
-        <h1>
+        <h1 className="title-big uppercase">
           <PageTitle title={["So, you want to travel to", "Space"]} />
         </h1>
         <p>
@@ -15,8 +15,10 @@ export default function HomeMain() {
           experience!
         </p>
       </article>
-      <div>
-        <Link href={"#"}>Explore</Link>
+      <div className="py-24 grid place-items-center">
+        <Link className="big-button" href="/destination">
+          Explore
+        </Link>
       </div>
     </section>
   );
