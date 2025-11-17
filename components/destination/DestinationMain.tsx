@@ -2,6 +2,7 @@
 import PagesTitle from "@components/shared/PagesTitle";
 import { useState } from "react";
 import { loadData } from "../../lib/load-data";
+import { DefaultContainer } from "@components/shared/DefaultContainer";
 
 export default function DestinationMain() {
   const destinations = loadData("destinations");
@@ -14,7 +15,7 @@ export default function DestinationMain() {
     distance,
   } = destinations[activeIndex];
   return (
-    <>
+    <DefaultContainer>
       <PagesTitle title={"01 Pick your destination"} />
       <section>
         <article>
@@ -50,6 +51,6 @@ export default function DestinationMain() {
           </div>
         </article>
       </section>
-    </>
+    </DefaultContainer>
   );
 }

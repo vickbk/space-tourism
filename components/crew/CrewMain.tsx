@@ -4,6 +4,7 @@ import { useState } from "react";
 import { loadData } from "../../lib/load-data";
 import PageTitle from "@components/shared/DisplayTitles";
 import PagesTitle from "@components/shared/PagesTitle";
+import { DefaultContainer } from "@components/shared/DefaultContainer";
 
 export default function CrewMain() {
   const crewData = loadData("crew");
@@ -15,7 +16,7 @@ export default function CrewMain() {
     bio,
   } = crewData[activeIndex];
   return (
-    <>
+    <DefaultContainer>
       <PagesTitle title="02 Meet your crew" />
       <section>
         <article>
@@ -39,6 +40,6 @@ export default function CrewMain() {
           <img src={image} alt={`A picture of our ${role} ${name}`} />
         </div>
       </section>
-    </>
+    </DefaultContainer>
   );
 }

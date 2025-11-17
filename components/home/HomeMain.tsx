@@ -1,9 +1,10 @@
+import { DefaultContainer } from "@components/shared/DefaultContainer";
 import PageTitle from "@components/shared/DisplayTitles";
 import Link from "next/link";
 
 export default function HomeMain() {
   return (
-    <section className="px-8 text-center">
+    <DefaultContainer>
       <article>
         <h1 className="title-big uppercase">
           <PageTitle title={["So, you want to travel to", "Space"]} />
@@ -20,6 +21,6 @@ export default function HomeMain() {
           Explore
         </Link>
       </div>
-    </section>
+    </DefaultContainer>
   );
 }
