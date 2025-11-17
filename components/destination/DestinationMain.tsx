@@ -44,8 +44,8 @@ export default function DestinationMain() {
               ))}
             </ul>
           </nav>
-          <h2>
-            <span>The planet </span> {name}
+          <h2 className="planet__title">
+            <span className="sr-only">The planet </span> {name}
           </h2>
           <p>{description}</p>
           <div>
