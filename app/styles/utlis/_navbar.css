@@ -1,5 +1,5 @@
 .navbar {
-  @apply absolute top-0 right-0
+  @apply fixed top-0 right-0
   p-8 
   backdrop-blur-xs 
   h-screen w-3/4
