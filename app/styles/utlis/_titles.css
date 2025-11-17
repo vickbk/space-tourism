@@ -6,3 +6,9 @@
   font-size: clamp(5rem, 3.2394rem + 7.5117vw, 10rem);
   font-family: var(--ff-bellefair);
 }
+
+.page-title {
+  @apply uppercase flex justify-center gap-4;
+  font-family: var(--ff-barlow-cond);
+  font-size: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+}

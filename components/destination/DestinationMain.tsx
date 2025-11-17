@@ -19,7 +19,7 @@ export default function DestinationMain() {
       <PagesTitle title={"01 Pick your destination"} />
       <section>
         <article>
-          <h2>Planet illustration</h2>
+          <h2 className="sr-only">Planet illustration</h2>
           <img src={image} alt={`Planet ${name} preview image`} />
         </article>
         <article>
