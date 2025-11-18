@@ -19,13 +19,13 @@ export default function CrewMain() {
   return (
     <DefaultContainer>
       <PagesTitle title="02 Meet your crew" />
-      <ContentHolder className="crew">
+      <ContentHolder className="crew self-center">
         <article>
           <h2 className="normal-title">
             <PageTitle title={[role, name]} />
           </h2>
           <p>{bio}</p>
-          <ul className="flex justify-center gap-4 py-8">
+          <ul className="flex justify-center md:justify-start gap-4 md:gap-8 py-8 md:pt-16 lg:pt-32">
             {crewData.map(({ name }, index) => (
               <li key={index}>
                 <button
@@ -40,14 +40,14 @@ export default function CrewMain() {
             ))}
           </ul>
         </article>
-        <div>
-          <img
-            className="mx-auto"
-            src={image}
-            alt={`A picture of our ${role} ${name}`}
-          />
-        </div>
       </ContentHolder>
+      <div>
+        <img
+          className="mx-auto"
+          src={image}
+          alt={`A picture of our ${role} ${name}`}
+        />
+      </div>
     </DefaultContainer>
   );
 }
