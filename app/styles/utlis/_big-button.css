@@ -2,7 +2,8 @@
   @apply grid relative place-items-center 
   px-8 sm:px-12
   uppercase
-  aspect-square rounded-full;
+  aspect-square rounded-full 
+  md:place-self-end;
   background-color: hsl(var(--foreground));
   color: hsl(var(--background));
   font-family: var(--ff-bellefair);
