@@ -47,7 +47,7 @@ export default function DestinationMain() {
             ))}
           </ul>
 
-          <section className="max-w-162 mx-auto">
+          <DefaultContainer>
             <h2 className="planet__title">
               <span className="sr-only">The planet </span> {name}
             </h2>
@@ -63,7 +63,7 @@ export default function DestinationMain() {
                 </div>
               ))}
             </div>
-          </section>
+          </DefaultContainer>
         </article>
       </section>
     </DefaultContainer>

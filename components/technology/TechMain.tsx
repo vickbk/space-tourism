@@ -5,6 +5,7 @@ import { loadData } from "@lib/load-data";
 import PagesTitle from "@components/shared/PagesTitle";
 import PageTitle from "@components/shared/DisplayTitles";
 import ContentHolder from "@components/shared/ContentHolder";
+import { Img, Picture, Source } from "next-image-plus";
 
 export default function TechMain() {
   const technologies = loadData("technology");
@@ -14,17 +15,27 @@ export default function TechMain() {
     description,
     images: { landscape, portrait },
   } = technologies[activeIndex];
+  const [mobileImg, desktopImg] = [landscape, portrait].map((img) =>
+    img.substring(1)
+  );
   return (
     <section className="tech">
       <PagesTitle title="03 Space launch 101" />
-      <picture>
-        <source media="(width >= 768px)" src={portrait} />
-        <img
-          className="mt-16"
-          src={landscape}
-          alt={`An image of the ${name} technology`}
+      <Picture>
+        <Source
+          media="(width >= 768px)"
+          src={desktopImg}
+          width={515}
+          height={527}
         />
-      </picture>
+        <Img
+          className="mt-16"
+          src={mobileImg}
+          alt={`An image of the ${name} technology`}
+          width={768}
+          height={310}
+        />
+      </Picture>
       <ContentHolder className="p-8 text-center c-blue-300">
         <ul
           className="flex justify-center gap-8"
