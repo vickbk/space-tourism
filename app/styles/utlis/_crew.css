@@ -1,10 +1,10 @@
 .crew__choice {
   @apply p-2 rounded-full;
-  background-color: hsl(var(--blue-300) / var(--choice-accent, 0.6));
+  background-color: hsl(var(--white) / var(--choice-accent, 0.4));
   &:hover,
   &:active,
   &:focus {
-    --choice-accent: 0.7;
+    --choice-accent: 0.6;
   }
 }
 

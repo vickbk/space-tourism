@@ -27,7 +27,7 @@ export default function DestinationMain() {
         <article>
           <nav>
             <ul
-              className="flex justify-center gap-4 ff-barlow-cond"
+              className="flex justify-center gap-8 ff-barlow-cond"
               aria-label="Planet destination list"
             >
               {destinations.map(({ name }, index) => (
@@ -54,13 +54,8 @@ export default function DestinationMain() {
               ["est. travel time", travel],
             ].map(([title, value], index) => (
               <div key={index} className="">
-                <div
-                  className="ff-barlow-cond c-blue-300"
-                  style={{ "--txt-accent": 0.6 } as CSSProperties}
-                >
-                  {title}
-                </div>
-                <div className="text-3xl ff-bellefair">{value}</div>
+                <div className="ff-barlow-cond">{title}</div>
+                <div className="text-3xl ff-bellefair c-white">{value}</div>
               </div>
             ))}
           </div>

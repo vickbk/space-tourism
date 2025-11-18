@@ -2,22 +2,23 @@
   @apply uppercase 
   pb-4 
   transition-colors duration-300;
-  color: hsl(var(--blue-300) / var(--choice-accent, 0.6));
+  color: hsl(var(--blue-300));
   &:hover,
   &:active,
   &:focus {
-    border-bottom: 0.3rem solid hsl(var(--blue-300) / 0.8);
-    --choice-accent: 0.8;
+    border-bottom: 0.3rem solid hsl(var(--white) / 0.8);
+    color: hsl(var(--white) / 0.8);
   }
 }
 
 .planet__choice[data-current="true"] {
-  border-bottom: 0.3rem solid hsl(var(--blue-300));
-  --choice-accent: 1;
+  border-bottom: 0.3rem solid hsl(var(--white));
+  color: hsl(var(--white));
 }
 
 .planet__title {
   @apply uppercase;
   font-size: clamp(4rem, 3.6479rem + 1.5023vw, 5rem);
   font-family: var(--ff-bellefair);
+  color: hsl(var(--white));
 }
