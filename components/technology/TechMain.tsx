@@ -4,6 +4,7 @@ import { useState } from "react";
 import { loadData } from "@lib/load-data";
 import PagesTitle from "@components/shared/PagesTitle";
 import PageTitle from "@components/shared/DisplayTitles";
+import ContentHolder from "@components/shared/ContentHolder";
 
 export default function TechMain() {
   const technologies = loadData("technology");
@@ -17,14 +18,14 @@ export default function TechMain() {
     <section className="tech">
       <PagesTitle title="03 Space launch 101" />
       <picture>
-        <source media="(min-width: 768px)" src={portrait} />
+        <source media="(width >= 768px)" src={portrait} />
         <img
           className="mt-16"
           src={landscape}
           alt={`An image of the ${name} technology`}
         />
       </picture>
-      <section className="p-8 text-center c-blue-300">
+      <ContentHolder className="p-8 text-center c-blue-300">
         <ul
           className="flex justify-center gap-8"
           aria-label="navigate the different technologies"
@@ -49,7 +50,7 @@ export default function TechMain() {
           </h2>
           <p>{description}</p>
         </article>
-      </section>
+      </ContentHolder>
     </section>
   );
 }

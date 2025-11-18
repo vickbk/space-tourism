@@ -5,6 +5,7 @@ import { loadData } from "@lib/load-data";
 import PageTitle from "@components/shared/DisplayTitles";
 import PagesTitle from "@components/shared/PagesTitle";
 import { DefaultContainer } from "@components/shared/DefaultContainer";
+import ContentHolder from "@components/shared/ContentHolder";
 
 export default function CrewMain() {
   const crewData = loadData("crew");
@@ -18,7 +19,7 @@ export default function CrewMain() {
   return (
     <DefaultContainer>
       <PagesTitle title="02 Meet your crew" />
-      <section className="crew max-w-162 mx-auto">
+      <ContentHolder className="crew">
         <article>
           <h2 className="normal-title">
             <PageTitle title={[role, name]} />
@@ -46,7 +47,7 @@ export default function CrewMain() {
             alt={`A picture of our ${role} ${name}`}
           />
         </div>
-      </section>
+      </ContentHolder>
     </DefaultContainer>
   );
 }
