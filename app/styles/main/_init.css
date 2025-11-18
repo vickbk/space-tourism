@@ -29,6 +29,15 @@
   --font-mono: var(--ff-barlow);
 }
 
+/* Styles for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none; /* Disable animations */
+    transition: none; /* Disable transitions */
+    transform: none; /* Reset any transform properties */
+  }
+}
+
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
