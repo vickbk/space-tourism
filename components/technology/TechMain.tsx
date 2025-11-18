@@ -20,27 +20,29 @@ export default function TechMain() {
   );
   return (
     <section className="tech">
-      <div className="sm:pl-8">
+      <div className="sm:pl-8 md:pl-18 col-span-full">
         <PagesTitle title="03 Space launch 101" />
       </div>
-      <Picture>
-        <Source
-          media="(width >= 768px)"
-          src={desktopImg}
-          width={515}
-          height={527}
-        />
-        <Img
-          className="mt-16"
-          src={mobileImg}
-          alt={`An image of the ${name} technology`}
-          width={768}
-          height={310}
-        />
-      </Picture>
-      <ContentHolder className="p-8 text-center c-blue-300">
+      <div className="justify-self-end">
+        <Picture>
+          <Source
+            media="(width >= 768px)"
+            src={desktopImg}
+            width={515}
+            height={527}
+          />
+          <Img
+            className="mt-16 md:my-16"
+            src={mobileImg}
+            alt={`An image of the ${name} technology`}
+            width={768}
+            height={310}
+          />
+        </Picture>
+      </div>
+      <ContentHolder className="p-8 text-center md:text-start c-blue-300 col-start-1 row-start-2 self-center md:grid md:grid-cols-[auto_1fr] md:gap-8 lg:gap-16 md:pl-8 md:pr-0 lg:pl-16">
         <ul
-          className="flex justify-center gap-8"
+          className="flex justify-center md:justify-end md:flex-col gap-8"
           aria-label="navigate the different technologies"
         >
           {technologies.map(({ name }, key) => (
