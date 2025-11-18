@@ -1,7 +1,7 @@
 "use client";
 import PagesTitle from "@components/shared/PagesTitle";
 import { CSSProperties, useState } from "react";
-import { loadData } from "../../lib/load-data";
+import { loadData } from "@lib/load-data";
 import { DefaultContainer } from "@components/shared/DefaultContainer";
 
 export default function DestinationMain() {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { loadData } from "../../lib/load-data";
+import { loadData } from "@lib/load-data";
 import PageTitle from "@components/shared/DisplayTitles";
 import PagesTitle from "@components/shared/PagesTitle";
 import { DefaultContainer } from "@components/shared/DefaultContainer";

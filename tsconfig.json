@@ -17,7 +17,8 @@
       "@/*": ["./app/*"],
       "@components/*": ["./components/*"],
       "@assets/*": ["./utils/starter-code/assets/*"],
-      "@utils/*": ["./utils/*"]
+      "@utils/*": ["./utils/*"],
+      "@lib/*": ["./lib/*"]
     },
     "plugins": [
       {
