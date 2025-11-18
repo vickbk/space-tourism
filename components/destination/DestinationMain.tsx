@@ -24,7 +24,7 @@ export default function DestinationMain() {
         <h2 className="sr-only">Planet illustration</h2>
         <div className="py-16">
           <img
-            className="mx-auto w-75"
+            className="mx-auto w-75 animate-spin [animation-duration:15s]"
             src={image}
             alt={`Planet ${name} preview image`}
           />
