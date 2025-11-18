@@ -8,7 +8,7 @@ export default function ContentHolder({
   className?: string;
 }) {
   return (
-    <section className={`max-w-162 mx-auto${className && ` ${className}`}`}>
+    <section className={`max-w-162 mx-auto${className ? ` ${className}` : ""}`}>
       {children}
     </section>
   );

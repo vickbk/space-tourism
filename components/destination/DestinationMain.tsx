@@ -3,6 +3,7 @@ import PagesTitle from "@components/shared/PagesTitle";
 import { useState } from "react";
 import { loadData } from "@lib/load-data";
 import { DefaultContainer } from "@components/shared/DefaultContainer";
+import ContentHolder from "@components/shared/ContentHolder";
 
 export default function DestinationMain() {
   const destinations = loadData("destinations");
@@ -47,7 +48,7 @@ export default function DestinationMain() {
             ))}
           </ul>
 
-          <DefaultContainer>
+          <ContentHolder>
             <h2 className="planet__title">
               <span className="sr-only">The planet </span> {name}
             </h2>
@@ -63,7 +64,7 @@ export default function DestinationMain() {
                 </div>
               ))}
             </div>
-          </DefaultContainer>
+          </ContentHolder>
         </article>
       </section>
     </DefaultContainer>
