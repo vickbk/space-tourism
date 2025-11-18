@@ -18,13 +18,14 @@ export default function MainHeader() {
   const [showNav, setShowNav] = useState(false);
   const showHideNav = () => setShowNav(!showNav);
   return (
-    <header className="p-8 sm:pl-8 sm:p-0 mb-auto flex justify-between items-center relative overflow-x-hidden">
+    <header className="header">
       <Link href={"./"}>
         <Image src={logo} alt="Home page logo" />
       </Link>
       <button className="sm:hidden" type="button" onClick={showHideNav}>
         <Image src={humberger} alt="Open navigation bar" />
       </button>
+      <div className="header__filler"></div>
       <nav className="navbar" data-open={showNav}>
         <button
           className="self-end sm:hidden"
