@@ -20,7 +20,9 @@ export default function TechMain() {
   );
   return (
     <section className="tech">
-      <PagesTitle title="03 Space launch 101" />
+      <div className="sm:pl-8">
+        <PagesTitle title="03 Space launch 101" />
+      </div>
       <Picture>
         <Source
           media="(width >= 768px)"

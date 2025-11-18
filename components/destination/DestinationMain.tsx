@@ -52,7 +52,7 @@ export default function DestinationMain() {
               <span className="sr-only">The planet </span> {name}
             </h2>
             <p className="planet__separator">{description}</p>
-            <div className="pt-8 uppercase sm:flex justify-evenly">
+            <div className="py-8 uppercase sm:flex justify-evenly">
               {[
                 ["avg. distance", distance],
                 ["est. travel time", travel],
