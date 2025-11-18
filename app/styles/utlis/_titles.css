@@ -1,6 +1,8 @@
 .title-big {
-  @apply text-lg uppercase;
+  @apply uppercase;
   font-family: var(--ff-barlow-cond);
+  /* font-size: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem); */
+  font-size: clamp(1.5rem, 1.0714rem + 2.2857vw, 2.5rem);
 }
 .normal-title {
   @apply text-2xl uppercase  py-8;
@@ -12,7 +14,7 @@
 }
 .title-big .focus {
   color: hsl(var(--white));
-  font-size: clamp(5rem, 3.2394rem + 7.5117vw, 10rem);
+  font-size: clamp(5rem, 2rem + 16vw, 12rem);
 }
 
 .normal-title .focus {
