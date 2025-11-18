@@ -14,8 +14,17 @@
     "jsx": "react-jsx",
     "incremental": true,
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./app/*"],
+      "@components/*": ["./components/*"],
+      "@assets/*": ["./utils/starter-code/assets/*"],
+      "@utils/*": ["./utils/*"],
+      "@lib/*": ["./lib/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",

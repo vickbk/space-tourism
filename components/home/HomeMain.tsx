@@ -1,0 +1,29 @@
+import ContentHolder from "@components/shared/ContentHolder";
+import { DefaultContainer } from "@components/shared/DefaultContainer";
+import PageTitle from "@components/shared/DisplayTitles";
+import Link from "next/link";
+
+export default function HomeMain() {
+  return (
+    <DefaultContainer>
+      <article>
+        <ContentHolder>
+          <h1 className="title-big uppercase">
+            <PageTitle title={["So, you want to travel to", "Space"]} />
+          </h1>
+          <p className="md:pb-8">
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+        </ContentHolder>
+      </article>
+      <div className="py-24 grid place-items-center">
+        <Link className="big-button" href="/destination">
+          Explore
+        </Link>
+      </div>
+    </DefaultContainer>
+  );
+}
