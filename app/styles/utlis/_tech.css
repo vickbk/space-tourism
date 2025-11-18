@@ -1,5 +1,5 @@
 .tech__choice {
-  @apply px-6 aspect-square rounded-full;
+  @apply px-5 aspect-square rounded-full;
   border: 0.1em solid hsl(var(--foreground) / var(--choice-accent, 0.5));
   color: hsl(var(--foreground));
   &[data-current="true"] {

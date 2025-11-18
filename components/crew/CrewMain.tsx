@@ -20,7 +20,7 @@ export default function CrewMain() {
       <PagesTitle title="02 Meet your crew" />
       <section className="crew">
         <article>
-          <h2 className="normal-title py-8">
+          <h2 className="normal-title">
             <PageTitle title={[role, name]} />
           </h2>
           <p>{bio}</p>

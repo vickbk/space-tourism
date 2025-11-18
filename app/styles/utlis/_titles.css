@@ -3,7 +3,7 @@
   font-family: var(--ff-barlow-cond);
 }
 .normal-title {
-  @apply text-2xl uppercase;
+  @apply text-2xl uppercase  py-8;
   color: hsl(var(--white) / 0.6);
 }
 .focus,
