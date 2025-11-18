@@ -22,16 +22,20 @@ export default function MainHeader() {
       <Link href={"./"}>
         <Image src={logo} alt="Home page logo" />
       </Link>
-      <button type="button" onClick={showHideNav}>
+      <button className="sm:hidden" type="button" onClick={showHideNav}>
         <Image src={humberger} alt="Open navigation bar" />
       </button>
       <nav className="navbar" data-open={showNav}>
-        <button className="self-end" type="button" onClick={showHideNav}>
+        <button
+          className="self-end sm:hidden"
+          type="button"
+          onClick={showHideNav}
+        >
           <Image src={close} alt="Close navigation bar" />
         </button>
-        <ul>
+        <ul className="sm:flex">
           {paths.map(([path, text], key) => (
-            <li className="navbar__list" key={key}>
+            <li className={`navbar__list ${path === "" && " home"}`} key={key}>
               <Link
                 className="navbar__link"
                 href={"/" + path}
