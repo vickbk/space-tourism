@@ -14,7 +14,8 @@
 }
 .title-big .focus {
   color: hsl(var(--white));
-  font-size: clamp(5rem, 2rem + 16vw, 12rem);
+  /* font-size: clamp(5rem, 2rem + 16vw, 12rem); */
+  font-size: clamp(5rem, 2.8571rem + 11.4286vw, 10rem);
 }
 
 .normal-title .focus {
