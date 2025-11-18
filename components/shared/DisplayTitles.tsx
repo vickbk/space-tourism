@@ -5,7 +5,8 @@ export default function PageTitle({
 }) {
   return (
     <>
-      {prefix} <span className="focus">{focus}</span>
+      {prefix} <br />
+      <span className="focus">{focus}</span>
       {suffix ?? ""}
     </>
   );

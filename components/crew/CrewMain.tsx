@@ -18,7 +18,7 @@ export default function CrewMain() {
   return (
     <DefaultContainer>
       <PagesTitle title="02 Meet your crew" />
-      <section className="crew">
+      <section className="crew max-w-162 mx-auto">
         <article>
           <h2 className="normal-title">
             <PageTitle title={[role, name]} />
@@ -40,7 +40,11 @@ export default function CrewMain() {
           </ul>
         </article>
         <div>
-          <img src={image} alt={`A picture of our ${role} ${name}`} />
+          <img
+            className="mx-auto"
+            src={image}
+            alt={`A picture of our ${role} ${name}`}
+          />
         </div>
       </section>
     </DefaultContainer>

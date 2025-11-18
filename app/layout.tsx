@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
-import {
-  Barlow,
-  Barlow_Condensed,
-  Bellefair,
-  Geist,
-  Geist_Mono,
-} from "next/font/google";
+import { Barlow, Barlow_Condensed, Bellefair } from "next/font/google";
 import "./globals.css";
 import MainHeader from "@components/header/MainHeader";
-import { headers } from "next/headers";
 import CustomBody from "@components/shared/CustomBody";
 
 const barlow = Barlow({
@@ -43,7 +36,7 @@ export default function RootLayout({
       {/* using a custom body element to manage the background change on page changes */}
       <CustomBody>
         <MainHeader />
-        {children}
+        <main className="mt-8">{children}</main>
       </CustomBody>
     </html>
   );
