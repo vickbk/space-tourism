@@ -14,29 +14,42 @@ export default function TechMain() {
     images: { landscape, portrait },
   } = technologies[activeIndex];
   return (
-    <>
+    <section className="tech">
       <PagesTitle title="03 Space launch 101" />
-      <nav>
-        <ul>
+      <picture>
+        <source media="(min-width: 768px)" src={landscape} />
+        <img
+          className="mt-16"
+          src={portrait}
+          alt={`An image of the ${name} technology`}
+        />
+      </picture>
+      <section className="p-8 text-center c-blue-300">
+        <ul
+          className="flex justify-center gap-8"
+          aria-label="navigate the different technologies"
+        >
           {technologies.map(({ name }, key) => (
             <li key={key}>
-              <button type="button" onClick={() => setActiveIndex(key)}>
-                {key + 1} <span>{name}</span>
+              <button
+                className="tech__choice"
+                type="button"
+                onClick={() => setActiveIndex(key)}
+                data-current={key === activeIndex}
+              >
+                {key + 1} <span className="sr-only">{name}</span>
               </button>
             </li>
           ))}
         </ul>
-      </nav>
-      <article>
-        <h2>
-          <PageTitle title={["The technology...", name]} />
-        </h2>
-        <p>{description}</p>
-      </article>
-      <picture>
-        <source media="(min-width: 768px)" src={landscape} />
-        <img src={portrait} alt={`An image of the ${name} technology`} />
-      </picture>
-    </>
+
+        <article>
+          <h2>
+            <PageTitle title={["The technology...", name]} />
+          </h2>
+          <p>{description}</p>
+        </article>
+      </section>
+    </section>
   );
 }
